@@ -1,15 +1,16 @@
 {
   "name": "laugh-tale-api",
   "version": "0.0.0",
+  "type": "module",
+  "module": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "elysia": "1.4.30"
   },
   "devDependencies": {
-    "bun-types": "latest"
-  },
-  "module": "src/index.js"
+    "bun-types": "1.4.2"
+  }
 }
