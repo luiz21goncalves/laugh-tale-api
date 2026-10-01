@@ -1,6 +1,4 @@
-import { Elysia } from "elysia";
-import { ENV } from "./env";
+import { app } from './app.ts'
+import { ENV } from './env.ts'
 
-const app = new Elysia().get("/", () => "Hello Elysia").listen(ENV.PORT);
-
-console.log(`🦊 Elysia is running at ${app.server?.url}`);
+app.listen(ENV.PORT)
