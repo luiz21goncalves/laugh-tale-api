@@ -14,3 +14,12 @@ services:
       timeout: 5s
       retries: 5
       start_period: 10s
+
+  mailhog:
+    container_name: mailhog
+    image: mailhog/mailhog:v1.0.1
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - 1025:1025
+      - 8025:8025
