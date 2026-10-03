@@ -16,6 +16,9 @@
     "enabled": true,
     "rules": {
       "preset": "all"
+    },
+    "domains": {
+      "drizzle": "all"
     }
   },
   "json": {
