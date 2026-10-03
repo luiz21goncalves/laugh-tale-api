@@ -4,9 +4,14 @@ import { emailOTP, openAPI } from 'better-auth/plugins'
 import { db } from './db/index.ts'
 import { schemas } from './db/relations.ts'
 import { transporter } from './transporter.ts'
+import { ENV } from './env.ts'
 export const auth = betterAuth({
   appName: 'Laugh Tale',
   basePath: '/auth',
+  advanced: {
+    cookiePrefix: 'laugh_tale',
+    useSecureCookies: ENV.NODE_ENV === 'production'
+  },
   database: drizzleAdapter(db, {
     provider: 'pg',
     schema: schemas,

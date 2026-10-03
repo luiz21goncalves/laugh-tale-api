@@ -6,6 +6,8 @@ const envSchema = z.object({
   MAILER_SMTP_URL: z.url(),
   NODE_ENV: z.enum(['test', 'development', 'production']),
   PORT: z.coerce.number(),
+  BETTER_AUTH_URL: z.url(),
+  BETTER_AUTH_SECRET: z.string(),
 })
 
 export const ENV = envSchema.parse(Bun.env)
