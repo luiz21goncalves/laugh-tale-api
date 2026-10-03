@@ -6,8 +6,12 @@ const app = new Elysia()
   .use(
     openapi({
       documentation: {
-        info: { title: 'Laugh Tale', version: '0.0.0', description: 'Onde você encontrará todos os tesouros.' },
         externalDocs: { description: 'Auth', url: '/auth/reference' },
+        info: {
+          description: 'Onde você encontrará todos os tesouros.',
+          title: 'Laugh Tale',
+          version: '0.0.0',
+        },
       },
       path: 'docs',
     })
